@@ -2,7 +2,7 @@ import random
 import os
 
 #Count lines in file
-inFile = open(os.getcwd() + "Hangman.txt", "r")
+inFile = open("Hangman.txt", "r")
 ctr = 0 
 for line in inFile:
 	ctr += 1
@@ -10,7 +10,7 @@ selectword = random.randint(1, ctr)
 inFile.close()
 
 #Select line
-inFile = open(os.getcwd() + "Hangman.txt", "r")
+inFile = open("Hangman.txt", "r")
 ctr = 0
 for line in inFile:
 	ctr += 1
