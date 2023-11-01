@@ -6,10 +6,10 @@ def distanceFormula(x1, y1, x2, y2):
 
 class nail:
     def __init__(self, x, y):
-    	self.x = x
-    	self.y = y
+        self.x = x
+        self.y = y
     def __eq__(self, other):
-    	return(self.x == other.x and self.y == other.y)
+        return(self.x == other.x and self.y == other.y)
         
 pygame.init()
 clock = pygame.time.Clock()
@@ -46,7 +46,7 @@ while not done:
         else:
             pygame.draw.circle(screen, (0, 200, 200), (selected_n.x, selected_n.y), 8)
     #Left mouse
-    if pygame.mouse.get_pressed()[0]:	
+    if pygame.mouse.get_pressed()[0]:    
         #make lines between all_ns
         if not holdingleft:
             for selected_n in all_ns:
