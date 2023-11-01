@@ -1,4 +1,5 @@
 import pygame
+import math
 import random
 pygame.mixer.pre_init(44100, -16, 2, 2048)
 pygame.init()
@@ -9,13 +10,13 @@ class Trisha:
         self.rarity = rarity
         #initialize color based on rarity
         if self.rarity == "Common":
-        	self.textColor = [200, 200, 200]
+            self.textColor = [200, 200, 200]
         elif self.rarity == "Rare":
-        	self.textColor = [100, 100, 255]
+            self.textColor = [100, 100, 255]
         elif self.rarity == "Epic":
-        	self.textColor = [148, 0, 211]
+            self.textColor = [148, 0, 211]
         elif self.rarity == "Legendary":
-        	self.textColor = [255, 215, 0] 
+            self.textColor = [255, 215, 0] 
         self.image = image
         self.multiplier = multiplier
         self.x = x
@@ -24,7 +25,7 @@ class Trisha:
     def display(self):
         screen.blit(resize(self.image, self.multiplier), (self.x, self.y))
     def displayText(self):
-    	screenText(80, 50, (self.name + "  (" + self.rarity + ")"), 60, self.textColor)
+        screenText(80, 50, (self.name + "  (" + self.rarity + ")"), 60, self.textColor)
 
 def betterRect(color, x1, y1, x2, y2, width = 0):
     pygame.draw.polygon(screen, (color), ([(x1, y1), (x2, y1), (x2, y2), (x1, y2)]), width)
@@ -49,28 +50,28 @@ def incrementCrack(num):
         value = 0
 
     if value < 3:
-    	pygame.mixer.Channel(1).play(pygame.mixer.Sound('crack.wav'))   
+        pygame.mixer.Channel(1).play(pygame.mixer.Sound('crack.wav'))   
 
     return value
 
 def chooseTrisha():
-    rarity = random.randint(95, 100)
+    rarity = random.randint(0, 100)
     if rarity < 40:
-    	#common
+        #common
         trish = random.choice(commons)
         pygame.mixer.Channel(0).play(pygame.mixer.Sound('tada.wav'))
     elif rarity < 70:
-    	#rare
-    	trish = random.choice(rares)
-    	pygame.mixer.Channel(0).play(pygame.mixer.Sound('wow.wav'))
+        #rare
+        trish = random.choice(rares)
+        pygame.mixer.Channel(0).play(pygame.mixer.Sound('wow.wav'))
     elif rarity < 90:
-    	#epic
-    	trish = random.choice(epics)
-    	pygame.mixer.Channel(0).play(pygame.mixer.Sound('secret.wav'))
+        #epic
+        trish = random.choice(epics)
+        pygame.mixer.Channel(0).play(pygame.mixer.Sound('secret.wav'))
     else:
-    	#legendary
-    	trish = random.choice(legendaries)
-    	pygame.mixer.Channel(0).play(pygame.mixer.Sound('kingTut.wav'))
+        #legendary
+        trish = random.choice(legendaries)
+        pygame.mixer.Channel(0).play(pygame.mixer.Sound('kingTut.wav'))
 
     return(trish)
 def displayAll():
@@ -141,11 +142,11 @@ while not done:
                 crackStage = incrementCrack(crackStage)
                 #choose a Trisha randomly
                 if(crackStage == 3):
-                	selectedTrisha = chooseTrisha()
+                    selectedTrisha = chooseTrisha()
             #resetting the game
             elif(600 < pygame.mouse.get_pos()[1]):
-         	   crackStage = 0
-         	   pygame.mixer.Channel(0).play(pygame.mixer.Sound('eggSpawn.wav'))
+                crackStage = 0
+                pygame.mixer.Channel(0).play(pygame.mixer.Sound('eggSpawn.wav'))
 
                 
 
