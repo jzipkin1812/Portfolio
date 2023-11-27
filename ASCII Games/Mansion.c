@@ -135,9 +135,9 @@ int main(void)
   char input[20] = "";
   int inputCode = 0;
   int x = 1;
-  int y = 4;
+  int y = 4;a
   int bugleTimer = 0; // Number of moves allowed to go from the Master Bedroom to the Lounge to get the Bugle
-  Room *currentRoom = &allRooms[y][x];
+  Room *currentRoom = &allRooms[4][1];
 
   // Initialize all Items
   Item shovel = {"shovel", 0, 1, 0, 0, 0, "Using the gloves, you brush aside the vines and open the toolbox.\nInside, you find a [shovel]!"};
