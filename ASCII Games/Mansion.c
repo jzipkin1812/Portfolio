@@ -134,7 +134,7 @@ int main(void)
   // Initialize all game variables
   char input[20] = "";
   int inputCode = 0;
-  int x = 4;
+  int x = 1;
   int y = 4;
   int bugleTimer = 0; // Number of moves allowed to go from the Master Bedroom to the Lounge to get the Bugle
   Room *currentRoom = &allRooms[y][x];
