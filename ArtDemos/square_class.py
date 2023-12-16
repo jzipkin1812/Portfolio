@@ -174,6 +174,7 @@ while not done:
     #square designs
     #increaseSizeSquares()
     squareLines(5)
+    #streakSquares()
 
     #change width
     #print(lineWidth)
