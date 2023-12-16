@@ -1,0 +1,2 @@
+# Description
+A twist on a classic Japanese puzzle game. Meant to be built in intelliJ. Click on squares to transfer control to them. Only squares with grey diamonds may be controlled. Push around other boxes. To win a level, cover all colored sensors with corresponding colored boxes. Be careful not to push boxes into a corner that they cannot get out of. Each world uses new features. Try to discover what they do.

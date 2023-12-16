@@ -1,2 +1,2 @@
-#Description
+# Description
 All the files in this folder are one-file projects with Pygame. It's a variety pack in terms of genre and in quality. A few are just stubs of projects that I plan to finish in the future, but nonetheless are good insights into my inner world. The most substantial projects are gravityswitch.py and Wood_Thiccy_Vicky....py. I would rather you figure out the rules of these by trial and error than by me telling you them, especially for gravityswitch. Enjoy!
