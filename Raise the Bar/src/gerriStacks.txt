@@ -1,0 +1,480 @@
+
+d
+u
+d
+u
+d
+u
+d
+u
+d
+u
+d
+u
+d
+u
+d
+u
+d
+u
+d
+u
+d
+u
+t 
+
+
+
+d (BEAT DROP)
+
+ur
+
+d
+
+ul
+
+d
+
+lr
+
+d
+
+ulr
+s-U s-D s-L s-R 
+d (BEAT DROP 2ND 8COUNT)
+
+ur t
+
+d s-D
+
+ul
+
+d s-D
+
+lr
+
+d s-D
+
+ulr
+s-U s-L s-R
+d (BEAT DROP 3RD 8COUNT)
+
+ur s-U s-L
+
+d 
+
+ul s-U s-D s-R
+
+d
+
+lr s-U s-L
+
+d
+
+ulr s-U s-D s-R
+
+d (BEAT DROP 4TH 8COUNT) t
+
+ur s-U s-L
+
+d 
+
+ul s-U s-D s-R
+
+d
+
+lr s-U s-L
+
+d
+
+ulr s-U s-D s-R
+
+d (MELODY START) 
+u
+l
+r
+r 
+l
+u
+d
+l
+d t
+r
+u
+d
+u
+u
+r
+d
+l
+u
+u
+d
+r
+r
+l
+d
+u
+l
+r
+dl
+du
+lr
+ru
+t(NEXT PHRASE START)
+
+
+
+
+
+
+
+
+
+
+
+b
+
+ud
+
+b
+b
+ud
+
+b
+b
+ud
+
+b
+b
+ud
+
+b
+b
+ud
+t
+(VIOLIN SOLO BEAT 1)
+
+
+
+
+
+
+
+u
+
+r
+
+l
+
+d
+
+u t (3RD 8 COUNT) s-D
+r s-D s-L
+l s-L s-R
+d s-R s-U
+u s-U s-R
+r s-R s-L
+l s-L s-D
+d s-D s-L
+u s-L s-R
+r s-R s-U
+l s-U s-R
+d s-R s-L
+u s-L s-D
+r s-D s-L
+l s-L s-R
+d s-R s-U t
+u s-U s-R
+r s-R s-L
+l s-L s-D
+d s-D s-L
+u s-L s-R
+r s-R s-U
+l s-U s-R
+d s-R s-L
+u s-L s-D 
+r s-D s-L
+l s-L s-R
+d s-R s-U
+u s-U s-R
+r s-R s-L
+l s-L s-D
+d s-D 
+(VIOLINS TOGETHER BEAT 1) t
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+r
+
+
+
+l
+
+
+
+r
+
+
+
+l
+
+
+
+r
+
+
+
+l
+
+
+
+r
+
+
+
+t
+
+
+
+(HELL BEAT 1) 
+
+
+
+u
+b
+d
+b
+u
+b
+d
+b
+ul
+b
+dl
+b
+ul
+b
+dl
+b
+u
+b
+d
+b
+u
+b
+d
+b
+ul
+b
+dl
+b
+ul
+b
+dl
+b t
+
+
+
+
+
+
+
+
+r
+r
+r
+r
+r
+r
+r
+r
+ru
+ru
+ru
+ru 
+ru
+ru t
+ru
+ru s-R
+rl 
+rl 
+rl 
+rl s-L
+rl 
+rl 
+rl 
+rl
+s-L s-R
+
+
+
+
+
+
+
+ARROWSPEEDSLOWER t
+
+
+
+
+
+
+
+rl
+lu
+ud
+dr
+ru
+ul
+ld
+dr
+rl
+lu
+ud
+dr
+ru
+ul
+ld
+dr s-D s-R s-L s-U
+rl
+lu
+ud
+dr
+ru
+ul
+ld
+dr
+rl
+lu
+ud
+dr s-D s-R s-L s-U
+t ARROWSPEEDFASTER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ut
+
+
+
+d
+
+
+
+u
+
+
+
+d
+
+
+t ARROWSPEEDFASTER
+
+
+
+
+
+
+
+
+
+u
+
+
+
+d
+
+
+
+u
+
+
+
+d
+
+
+
+l
+
+r
+
+l
+
+r
+
+l
+
+r
+
+l
+
+r
+
+l
+
+r
+
+u
+
+d
+u
+l
+r
+d
+u
+l
+r
+d
+t
+ARROWSPEEDSLOWER
+
+
+
+
+
+
+
+t
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+END
+
+
+
+
+
