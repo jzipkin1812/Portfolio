@@ -1,6 +1,7 @@
 import pygame
 import math
 import random
+import os
 pygame.mixer.pre_init(44100, -16, 2, 2048)
 pygame.init()
 
@@ -50,7 +51,7 @@ def incrementCrack(num):
         value = 0
 
     if value < 3:
-        pygame.mixer.Channel(1).play(pygame.mixer.Sound('crack.wav'))   
+        pygame.mixer.Channel(1).play(pygame.mixer.Sound(path + 'crack.wav'))   
 
     return value
 
@@ -59,19 +60,19 @@ def chooseTrisha():
     if rarity < 40:
         #common
         trish = random.choice(commons)
-        pygame.mixer.Channel(0).play(pygame.mixer.Sound('tada.wav'))
+        pygame.mixer.Channel(0).play(pygame.mixer.Sound(path + 'tada.wav'))
     elif rarity < 70:
         #rare
         trish = random.choice(rares)
-        pygame.mixer.Channel(0).play(pygame.mixer.Sound('wow.wav'))
+        pygame.mixer.Channel(0).play(pygame.mixer.Sound(path + 'wow.wav'))
     elif rarity < 90:
         #epic
         trish = random.choice(epics)
-        pygame.mixer.Channel(0).play(pygame.mixer.Sound('secret.wav'))
+        pygame.mixer.Channel(0).play(pygame.mixer.Sound(path + 'secret.wav'))
     else:
         #legendary
         trish = random.choice(legendaries)
-        pygame.mixer.Channel(0).play(pygame.mixer.Sound('kingTut.wav'))
+        pygame.mixer.Channel(0).play(pygame.mixer.Sound(path + 'kingTut.wav'))
 
     return(trish)
 def displayAll():
@@ -97,23 +98,24 @@ screen_width = 600
 screen_height = 750
 screen = pygame.display.set_mode([screen_width,screen_height])
 done = False
+path = os.getcwd() + "\\"
 
 #images
-goldEgg = pygame.image.load("goldEgg.png")
-glamTrisha = pygame.image.load("glamTrisha.jpg")
-dominosTrisha = pygame.image.load("dominosTrisha.PNG")
-kawaiiTrisha = pygame.image.load("kawaiiTrisha.PNG")
-sadTrisha = pygame.image.load("sadTrisha.PNG")
-pinkTrisha = pygame.image.load("pinkTrisha.PNG")
-emoTrisha = pygame.image.load("emoTrisha.PNG")
-afroTrisha = pygame.image.load("afroTrisha.PNG")
-egyptTrisha = pygame.image.load("egyptTrisha.PNG")
-cowboyTrisha = pygame.image.load("cowboyTrisha.PNG")
-ursulaTrisha = pygame.image.load("ursulaTrisha.PNG")
+goldEgg =       pygame.image.load(path + "goldEgg.png")
+glamTrisha =    pygame.image.load(path + "glamTrisha.jpg")
+dominosTrisha = pygame.image.load(path + "dominosTrisha.PNG")
+kawaiiTrisha =  pygame.image.load(path + "kawaiiTrisha.PNG")
+sadTrisha =     pygame.image.load(path + "sadTrisha.PNG")
+pinkTrisha =    pygame.image.load(path + "pinkTrisha.PNG")
+emoTrisha =     pygame.image.load(path + "emoTrisha.PNG")
+afroTrisha =    pygame.image.load(path + "afroTrisha.PNG")
+egyptTrisha =   pygame.image.load(path + "egyptTrisha.PNG")
+cowboyTrisha =  pygame.image.load(path + "cowboyTrisha.PNG")
+ursulaTrisha =  pygame.image.load(path + "ursulaTrisha.PNG")
 
 #game variables and start the music
 crackStage = 0
-pygame.mixer.Channel(0).play(pygame.mixer.Sound('eggSpawn.wav'))
+pygame.mixer.Channel(0).play(pygame.mixer.Sound(path + 'eggSpawn.wav'))
 
 #lists of Trisha types
 commons = [Trisha("Emo Trisha", "Common", emoTrisha), Trisha("Glam Trisha", "Common", glamTrisha, 0.8), \
@@ -146,7 +148,7 @@ while not done:
             #resetting the game
             elif(600 < pygame.mouse.get_pos()[1]):
                 crackStage = 0
-                pygame.mixer.Channel(0).play(pygame.mixer.Sound('eggSpawn.wav'))
+                pygame.mixer.Channel(0).play(pygame.mixer.Sound(path + 'eggSpawn.wav'))
 
                 
 

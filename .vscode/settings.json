@@ -1,3 +1,7 @@
 {
-    "C_Cpp.default.compilerPath": "C:\\cygwin64\\bin\\gcc.exe"
+    "C_Cpp.default.compilerPath": "C:\\cygwin64\\bin\\gcc.exe",
+    "java.project.sourcePaths": [
+        "Sokoban+/Game/src",
+        "JavaFX Games/sokobanplus/src/main/java/com/example"
+    ]
 }
