@@ -42,7 +42,7 @@ class GameStateInfo:
         ascendingScale.recentDuration += self.tickTime / 1000.00
         # Go to the next note
         if (ascendingScale.recentDuration > speed):
-            print(ascendingScale.degree)
+            # print(ascendingScale.degree)
             #ascendingScale.playChord([self.scaleDegree, self.scaleDegree + 2, self.scaleDegree + 4])
             ascendingScale.playNote()
             ascendingScale.increaseScaleDegree(scaleSize)

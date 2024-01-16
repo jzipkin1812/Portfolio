@@ -2,11 +2,11 @@ import pygame
 import numpy
 import soundObject
 import frequencyRatios as fr
-
+import pitchCollections as pc
 class Scale:
-    def __init__(self, tonic, quality, octaves = 3):
+    def __init__(self, tonic, quality, octaves = 3, preloadedArray = [], singular = True):
         # STATIC frequency ratios
-
+        self.singular = singular
         self.degree = 1
         self.melodyIndex = 0
         self.melody = []
@@ -16,16 +16,20 @@ class Scale:
         self.notes = []
         self.sharpFrequencies = []
         self.sharpNotes = []
-        # Assemble the frequency array using any given array from pitchCollections with the INNER loop.
-        # Additional octaves will also be added with the OUTER loop.
-        for octave in range(1, octaves + 1):
-            for ratio in quality:
-                self.frequencies.append(ratio * tonic * octave)
-                self.sharpFrequencies.append(ratio * tonic * octave * fr.m2)
-        for f in self.frequencies:
-            self.notes.append(soundObject.SoundObject(f))
-        for sf in self.sharpFrequencies:
-            self.sharpNotes.append(soundObject.SoundObject(sf))
+        if len(preloadedArray) > 0:
+            for note in preloadedArray:
+                self.notes.append(soundObject.SoundObject(note, True))
+        else:
+            # Assemble the frequency array using any given array from pitchCollections with the INNER loop.
+            # Additional octaves will also be added with the OUTER loop.
+            for octave in range(1, octaves + 1):
+                for ratio in quality:
+                    self.frequencies.append(ratio * tonic * octave)
+                    self.sharpFrequencies.append(ratio * tonic * octave * fr.m2)
+            for f in self.frequencies:
+                self.notes.append(soundObject.SoundObject(f))
+            for sf in self.sharpFrequencies:
+                self.sharpNotes.append(soundObject.SoundObject(sf))
     def stop(self):
         for note in self.notes:
             note.stop()
@@ -33,7 +37,8 @@ class Scale:
             note.stop()
 
     def playNote(self):
-        self.stop()
+        if self.singular:
+            self.stop()
         self.notes[self.degree - 1].play()
     
     def playMelodic(self):

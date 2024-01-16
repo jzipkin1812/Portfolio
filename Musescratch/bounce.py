@@ -15,7 +15,7 @@ done = False
 
 # Game state info
 mainStatus = gs.GameStateInfo(screen)
-
+print(pygame.mixer.get_num_channels())
 while not done:
     mainStatus.updateFrames()
     
@@ -33,6 +33,7 @@ while not done:
     # mainStatus.scaleAscending(pitchCollections.cCounterpoint, 1, 8)
     mainStatus.playMelody(pitchCollections.cantusFirmus1, pitchCollections.a3Minor, 1.5)
     mainStatus.playMelody(pitchCollections.above1, pitchCollections.a3Minor2, 0.75)
+    # mainStatus.scaleAscending(pitchCollections.synthMajorScale, 0.4, 8)
 
     
     pygame.display.flip()

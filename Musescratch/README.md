@@ -4,8 +4,9 @@ My most recent in-progress Python project. Also the one with the widest possible
 # To run
 Run bounce.py with pygame installed.
 
-# Current Version: 1.0
+# Current Version: 1.1
 Plays a Bach-style counterpoint melody with sine tones. 
+Also contains support for prerecorded sound loading into scales. You can change the main game loop by uncommenting line 37 in bounce.py if you want to see this. Make sure to comment lines 35 and 36 if so. 
 
-# Next Version: 1.1
-Should improve tone quality. Should optimize sound creation. 
+# Next Version: 1.2
+Should add another octave to preloaded synth scale. Should add interactivity in some way.
