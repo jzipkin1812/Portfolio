@@ -3,6 +3,7 @@ import numpy
 import pitchCollections
 import scale
 import frequencyRatios as fr
+import entity
 
 class GameStateInfo:
     def __init__(self, screen):
@@ -23,12 +24,21 @@ class GameStateInfo:
         #Pitch index for scales
         self.scaleDegree = 1
         self.mostRecentNoteDuration = 0.00
+        #Entities
+        self.entities = []
+        for i in range(12):
+            newE = entity.Entity()
+            newE.initRandomSynthMajor(0.2)
+            self.entities.append(newE)
 
     def updateFrames(self):
         self.frames += 1 
         self.clock.tick()
         ticks = self.clock.get_time()
         self.tickTime = ticks
+        for e in self.entities:
+            e.bounceMove()
+            e.display(self.screen)
 
     def playMelody(self, melody, scaleToPlay, speed = 1):
         scaleToPlay.melody = melody

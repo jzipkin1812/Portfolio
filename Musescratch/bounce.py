@@ -5,18 +5,20 @@ import gameStateInfo as gs
 import frequencyRatios as fr
 import soundObject 
 import pitchCollections
+import constants as c
 pygame.init()
 
 # Pygame trackers
-screen_width = 750
-screen_height = 750
-screen = pygame.display.set_mode([screen_width,screen_height])
+
+screen = pygame.display.set_mode([c.SCREEN_WIDTH, c.SCREEN_HEIGHT])
 done = False
+pygame.mixer.set_num_channels(12)
 
 # Game state info
 mainStatus = gs.GameStateInfo(screen)
 print(pygame.mixer.get_num_channels())
 while not done:
+    screen.fill((0, 0, 0))
     mainStatus.updateFrames()
     
 
@@ -28,11 +30,10 @@ while not done:
                  
 
     
-    #ur drawings uwu
     # mainStatus.scaleAscending(pitchCollections.cNaturalMinor, 1, 8)
     # mainStatus.scaleAscending(pitchCollections.cCounterpoint, 1, 8)
-    mainStatus.playMelody(pitchCollections.cantusFirmus1, pitchCollections.a3Minor, 1.5)
-    mainStatus.playMelody(pitchCollections.above1, pitchCollections.a3Minor2, 0.75)
+    # mainStatus.playMelody(pitchCollections.cantusFirmus1, pitchCollections.a3Minor, 1.5)
+    # mainStatus.playMelody(pitchCollections.above1, pitchCollections.a3Minor2, 0.75)
     # mainStatus.scaleAscending(pitchCollections.synthMajorScale, 0.4, 8)
 
     
