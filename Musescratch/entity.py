@@ -25,9 +25,9 @@ class Entity:
         self.y = random.randint(0, c.SCREEN_HEIGHT - self.size)
         self.color = (random.randint(100, 255), random.randint(100, 255), random.randint(100, 255))
         self.note = random.choice(pc.synthChromatic)
-    def bounceMove(self):
-        self.x += self.xv
-        self.y += self.yv
+    def bounceMove(self, ticks = 1):
+        self.x += self.xv * ticks
+        self.y += self.yv * ticks
         if (self.y > c.SCREEN_HEIGHT - self.size):
             self.y = c.SCREEN_HEIGHT - self.size
             self.yv *= -1

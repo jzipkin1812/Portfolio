@@ -5,6 +5,6 @@ My most recent in-progress Python project. Also the one with the widest possible
 Run bounce.py with pygame installed.
 
 # Current Version: 1.2
-Plays mostly total chaos. Every run of the program is randomized. Everything is now here to produce the type of video in the description, but the problem is currently that it is not modifiable except by changing the source code. Instead, users should have a "level editor" function where they can manually OR randomly add the colored balls into the arena. Advanced functionality could be to change how balls are spawned during playback and could be to change how balls collide/anything else?
+Plays a basic version of these types of videos, with colored balls playing the notes of a major scale with sequential velocities. Everything is now here to produce the type of video in the description, but the problem is currently that it is not modifiable except by changing the source code. Instead, users should have a "level editor" function where they can manually OR randomly add the colored balls into the arena. Advanced functionality could be to change how balls are spawned during playback and could be to change how balls collide/anything else?
 # Next Version: 2.0
 Add "level editor" functionality.

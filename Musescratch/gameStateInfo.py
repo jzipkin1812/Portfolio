@@ -39,7 +39,7 @@ class GameStateInfo:
     
     def operateEntities(self):
         for e in self.entities:
-            e.bounceMove()
+            e.bounceMove(self.tickTime)
             e.display(self.screen)
 
     def playMelody(self, melody, scaleToPlay, speed = 1):
@@ -62,7 +62,7 @@ class GameStateInfo:
     def ballScale(self):
         self.entities = []
         for i in range(0, 8, 1):
-            self.entities.append(entity.Entity(30, 60 * (i + 1), 0.03 * (i + 1), 0, pc.synthMajor[i], \
+            self.entities.append(entity.Entity(30, 60 * (i + 1), 0.05 * (i + 1), 0, pc.synthMajor[i], \
                                                (200 - 20 * i, 10 * i + 10, 30 * i + 10)))
             print(i)
 
