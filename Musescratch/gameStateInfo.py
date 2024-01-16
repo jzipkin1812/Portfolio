@@ -1,6 +1,6 @@
 import pygame
 import numpy
-import pitchCollections
+import pitchCollections as pc
 import scale
 import frequencyRatios as fr
 import entity
@@ -35,7 +35,9 @@ class GameStateInfo:
         self.frames += 1 
         self.clock.tick()
         ticks = self.clock.get_time()
-        self.tickTime = ticks
+        self.tickTime = ticks 
+    
+    def operateEntities(self):
         for e in self.entities:
             e.bounceMove()
             e.display(self.screen)
@@ -56,4 +58,13 @@ class GameStateInfo:
             #ascendingScale.playChord([self.scaleDegree, self.scaleDegree + 2, self.scaleDegree + 4])
             ascendingScale.playNote()
             ascendingScale.increaseScaleDegree(scaleSize)
+
+    def ballScale(self):
+        self.entities = []
+        for i in range(0, 8, 1):
+            self.entities.append(entity.Entity(30, 60 * (i + 1), 0.03 * (i + 1), 0, pc.synthMajor[i], \
+                                               (200 - 20 * i, 10 * i + 10, 30 * i + 10)))
+            print(i)
+
+
             

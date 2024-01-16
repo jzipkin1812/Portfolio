@@ -6,15 +6,15 @@ import constants as c
 import random
 import math
 class Entity:
-    def __init__(self, x = 0, y = 0, speed = 0, note = 0):
+    def __init__(self, x = 0, y = 0, xv = 0, yv = 0, note = 0, color = (0, 0, 0)):
         self.x = x
         self.y = y
-        self.speed = speed
-        self.xv = 0
-        self.yv = 0
+        self.speed = math.sqrt(xv ** 2 + yv ** 2)
+        self.xv = xv
+        self.yv = yv
         self.note = note
         self.size = 30
-        self.color = ((0, 0, 0))
+        self.color = color
     def initRandomSynthMajor(self, speed):
         self.size = 50
         self.speed = speed
@@ -36,7 +36,6 @@ class Entity:
             self.y = self.size
             self.yv *= -1
             self.play()
-
         if (self.x > c.SCREEN_WIDTH - self.size):
             self.x = c.SCREEN_WIDTH - self.size
             self.xv *= -1

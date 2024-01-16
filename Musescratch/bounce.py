@@ -16,10 +16,12 @@ pygame.mixer.set_num_channels(12)
 
 # Game state info
 mainStatus = gs.GameStateInfo(screen)
+mainStatus.ballScale()
 print(pygame.mixer.get_num_channels())
 while not done:
     screen.fill((0, 0, 0))
     mainStatus.updateFrames()
+    mainStatus.operateEntities()
     
 
     for event in pygame.event.get(): 

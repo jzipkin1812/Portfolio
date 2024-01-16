@@ -12,7 +12,7 @@ def resize(image, multiplier):
     height = image.get_rect().size[1]
     return(pygame.transform.scale(image, (int(width * multiplier), int(height * multiplier))))
 
-def screenText(x, y, screen, text = "Default", size = 70, color = [250, 250, 250], background = None):
-    tempFont = pygame.font.SysFont("msgothicmsuigothicmspgothic", size)
+def screenText(x, y, screen, text = "Default", size = 100, color = [250, 250, 250], background = None):
+    tempFont = pygame.font.SysFont("msgothic", size)
     tempText = tempFont.render(text, True, color, background)
     screen.blit(tempText, (x, y))
