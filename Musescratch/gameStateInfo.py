@@ -59,12 +59,16 @@ class GameStateInfo:
             ascendingScale.playNote()
             ascendingScale.increaseScaleDegree(scaleSize)
 
-    def ballScale(self):
+    def ballMajorScale(self):
         self.entities = []
         for i in range(0, 8, 1):
             self.entities.append(entity.Entity(30, 60 * (i + 1), 0.05 * (i + 1), 0, pc.synthMajor[i], \
                                                (200 - 20 * i, 10 * i + 10, 30 * i + 10)))
-            print(i)
+    def ballChromaticScale(self):
+        self.entities = []
+        for i in range(0, 12, 1):
+            self.entities.append(entity.Entity(30, 60 * (i + 1), 0.03 * (i + 1), 0, pc.synthChromatic[i], \
+                                               (10 * i + 10, 200 - 15 * i, 20 * i + 10)))
 
 
             

@@ -16,7 +16,7 @@ pygame.mixer.set_num_channels(12)
 
 # Game state info
 mainStatus = gs.GameStateInfo(screen)
-mainStatus.ballScale()
+mainStatus.ballChromaticScale()
 print(pygame.mixer.get_num_channels())
 while not done:
     screen.fill((0, 0, 0))
