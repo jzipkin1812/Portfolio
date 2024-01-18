@@ -19,26 +19,17 @@ mainStatus = gs.GameStateInfo(screen)
 mainStatus.ballChromaticScale()
 print(pygame.mixer.get_num_channels())
 while not done:
-    screen.fill((0, 0, 0))
-    mainStatus.updateFrames()
-    mainStatus.operateEntities()
-    
 
+    mainStatus.loop()
     for event in pygame.event.get(): 
         if event.type == pygame.QUIT:
             done = True
-        # if event.type == pygame.KEYDOWN:
-        #     if event.key == pygame.K_Q:
-                 
-
-    
+        if event.type == pygame.KEYDOWN:
+            mainStatus.keyDown(event.key)
     # mainStatus.scaleAscending(pitchCollections.cNaturalMinor, 1, 8)
     # mainStatus.scaleAscending(pitchCollections.cCounterpoint, 1, 8)
     # mainStatus.playMelody(pitchCollections.cantusFirmus1, pitchCollections.a3Minor, 1.5)
     # mainStatus.playMelody(pitchCollections.above1, pitchCollections.a3Minor2, 0.75)
     # mainStatus.scaleAscending(pitchCollections.synthMajorScale, 0.4, 8)
-
-    
     pygame.display.flip()
-
 pygame.quit()
